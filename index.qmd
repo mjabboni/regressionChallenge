@@ -193,14 +193,14 @@ print(model3_sm.summary())
 **Answer:**
 
 The bivariate regression of Anxiety on Time produces:
-- **Intercept (β₀):** Approximately 0.3810
-- **Coefficient on Time (β₂):** Approximately 5.3651
-- **R-squared:** Very high (close to 1.0)
+- **Intercept (β₀):** Approximately -3.6801
+- **Coefficient on Time (β₂):** Approximately 5.3406
+- **R-squared:** 0.5630 (moderate fit)
 
 **Comparison to True Relationship:**
-The true coefficient on Time is 0.1, but our estimate is 5.3651—over 50 times larger! This massive overestimate occurs because Time is highly correlated with Stress in this dataset. When we regress Anxiety on Time alone, the coefficient captures both the direct effect of Time (0.1) and the indirect effect through its correlation with Stress.
+The true coefficient on Time is 0.1, but our estimate is 5.3406—over 53 times larger! This massive overestimate occurs because Time is highly correlated with Stress in this dataset. When we regress Anxiety on Time alone, the coefficient captures both the direct effect of Time (0.1) and the indirect effect through its correlation with Stress.
 
-This is a classic example of omitted variable bias: by failing to control for Stress, we get a completely misleading estimate of Time's effect on Anxiety.
+This is a classic example of omitted variable bias: by failing to control for Stress, we get a completely misleading estimate of Time's effect on Anxiety. The negative intercept (-3.6801) also reflects this bias, as the model tries to compensate for the missing Stress variable.
 
 ---
 
@@ -247,15 +247,15 @@ plt.show()
 
 **Answer:**
 
-The scatter plot shows a strong positive relationship between Time and Anxiety, with an R-squared near 1.0. The regression line fits the data well.
+The scatter plot shows a positive relationship between Time and Anxiety, with an R-squared of 0.5630. While this indicates a moderate fit, the regression line still captures a substantial portion of the variance.
 
 **Critical Issues:**
 
-1. **Severe omitted variable bias:** The coefficient of 5.3651 is astronomically wrong compared to the true value of 0.1. This happens because Time is correlated with Stress—people with higher stress levels tend to spend more time on social media, and Stress has a much larger effect on Anxiety (coefficient = 1.0) than Time does (coefficient = 0.1).
+1. **Severe omitted variable bias:** The coefficient of 5.3406 is astronomically wrong compared to the true value of 0.1—over 53 times larger! This happens because Time is correlated with Stress—people with higher stress levels tend to spend more time on social media, and Stress has a much larger effect on Anxiety (coefficient = 1.0) than Time does (coefficient = 0.1).
 
-2. **Misleading interpretation:** Someone looking at this bivariate regression would conclude that Time has a massive effect on Anxiety (5.3651 units per minute), when the true effect is tiny (0.1 units per minute). This is exactly why we need to control for Stress in multiple regression.
+2. **Misleading interpretation:** Someone looking at this bivariate regression would conclude that Time has a massive effect on Anxiety (5.3406 units per minute), when the true effect is tiny (0.1 units per minute). This is exactly why we need to control for Stress in multiple regression.
 
-3. **Perfect fit is deceptive:** The high R-squared suggests a good model, but the coefficient is completely wrong. This demonstrates that statistical significance and R-squared don't guarantee correct coefficient estimates.
+3. **Moderate fit can still be deceptive:** Even with an R-squared of 0.5630 (not perfect), the coefficient is completely wrong. This demonstrates that statistical significance and R-squared don't guarantee correct coefficient estimates. The model appears to fit reasonably well, but the coefficient interpretation is fundamentally flawed due to omitted variable bias.
 
 ---
 
