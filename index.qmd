@@ -644,9 +644,11 @@ By focusing on the low-stress regime (Stress ≤ 2) where we can use true Stress
 
 **Visual Diagnostic:**
 
+The following plots show scatter plots of Time vs Anxiety for the full sample and the subset. While these are bivariate views, the coefficient annotations reflect the results from the multiple regression models (controlling for StressSurvey in the full sample, and controlling for Stress in the subset). The plots illustrate how the same data, when analyzed with different approaches, produces dramatically different coefficient estimates.
+
 ```{python}
 #| label: fig-full-sample-wrong
-#| fig-cap: "Full sample regression showing incorrect Time coefficient"
+#| fig-cap: "Full sample data showing incorrect Time coefficient from multiple regression (Anxiety ~ StressSurvey + Time)"
 #| echo: false
 #| warning: false
 
@@ -672,9 +674,11 @@ plt.tight_layout()
 plt.show()
 ```
 
+The first plot shows all 15 observations from the full sample. The scatter plot displays the bivariate relationship between Time and Anxiety, while the annotation shows the Time coefficient from the multiple regression model (Anxiety ~ StressSurvey + Time), which incorrectly estimates -2.7799 instead of the true value of +0.1.
+
 ```{python}
 #| label: fig-subset-correct
-#| fig-cap: "Subset regression (Stress ≤ 2) showing correct Time coefficient"
+#| fig-cap: "Subset data (Stress ≤ 2) showing correct Time coefficient from multiple regression (Anxiety ~ Stress + Time)"
 #| echo: false
 #| warning: false
 
@@ -696,6 +700,8 @@ ax.text(0.5, 0.95, 'Estimated beta_2 = 0.1000\n(True value: +0.1)',
 plt.tight_layout()
 plt.show()
 ```
+
+The second plot shows the 9 observations from the subset (Stress ≤ 2). This scatter plot displays the same bivariate view, but the annotation shows the Time coefficient from the multiple regression model using the true Stress variable (Anxiety ~ Stress + Time), which correctly estimates 0.1000, matching the true value.
 
 **Key Insights from Subset Analysis:**
 
