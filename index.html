@@ -115,7 +115,7 @@ window.Quarto = {
 Table&nbsp;1: Observed data with known true relationships
 </figcaption>
 <div aria-describedby="tbl-observations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="44">
 <div>
 
 
@@ -248,7 +248,7 @@ Table&nbsp;1: Observed data with known true relationships
 <section id="question-1-bivariate-regression-analysis-with-stresssurvey" class="level2">
 <h2 class="anchored" data-anchor-id="question-1-bivariate-regression-analysis-with-stresssurvey">Question 1: Bivariate Regression Analysis with StressSurvey</h2>
 <p><strong>Question:</strong> Run a bivariate regression of Anxiety on StressSurvey. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="1dc8a825" class="cell" data-execution_count="3">
+<div id="e6174ef6" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 BIVARIATE REGRESSION: Anxiety ~ StressSurvey
@@ -267,7 +267,7 @@ Dep. Variable:                Anxiety   R-squared:                       0.901
 Model:                            OLS   Adj. R-squared:                  0.893
 Method:                 Least Squares   F-statistic:                     118.4
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           6.68e-08
-Time:                        18:59:28   Log-Likelihood:                -27.079
+Time:                        19:10:38   Log-Likelihood:                -27.079
 No. Observations:                  15   AIC:                             58.16
 Df Residuals:                      13   BIC:                             59.57
 Df Model:                           1                                         
@@ -298,19 +298,11 @@ Notes:
 <h2 class="anchored" data-anchor-id="question-2-visualization-of-bivariate-relationship-stresssurvey">Question 2: Visualization of Bivariate Relationship (StressSurvey)</h2>
 <p><strong>Question:</strong> Create a scatter plot with the regression line showing the relationship between StressSurvey and Anxiety. Comment on the fit and any potential issues.</p>
 <div id="cell-fig-stresssurvey-bivariate" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\whatf\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
-  warnings.warn(
-C:\Users\whatf\AppData\Local\Temp\ipykernel_31096\390915956.py:25: UserWarning: Glyph 8321 (\N{SUBSCRIPT ONE}) missing from font(s) Arial.
-  plt.tight_layout()
-C:\Users\whatf\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\IPython\core\pylabtools.py:170: UserWarning: Glyph 8321 (\N{SUBSCRIPT ONE}) missing from font(s) Arial.
-  fig.canvas.print_figure(bytes_io, **kw)</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div id="fig-stresssurvey-bivariate" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-stresssurvey-bivariate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-stresssurvey-bivariate-output-2.png" width="758" height="565" class="figure-img">
+<img src="index_files/figure-html/fig-stresssurvey-bivariate-output-1.png" width="758" height="565" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stresssurvey-bivariate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Bivariate relationship between StressSurvey and Anxiety with regression line
@@ -332,7 +324,7 @@ Figure&nbsp;1: Bivariate relationship between StressSurvey and Anxiety with regr
 <section id="question-3-bivariate-regression-analysis-with-time" class="level2">
 <h2 class="anchored" data-anchor-id="question-3-bivariate-regression-analysis-with-time">Question 3: Bivariate Regression Analysis with Time</h2>
 <p><strong>Question:</strong> Run a bivariate regression of Anxiety on Time. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="f7e7c2db" class="cell" data-execution_count="5">
+<div id="12913555" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 BIVARIATE REGRESSION: Anxiety ~ Time
@@ -351,7 +343,7 @@ Dep. Variable:                Anxiety   R-squared:                       0.563
 Model:                            OLS   Adj. R-squared:                  0.529
 Method:                 Least Squares   F-statistic:                     16.75
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):            0.00127
-Time:                        18:59:28   Log-Likelihood:                -38.223
+Time:                        19:10:38   Log-Likelihood:                -38.223
 No. Observations:                  15   AIC:                             80.45
 Df Residuals:                      13   BIC:                             81.86
 Df Model:                           1                                         
@@ -382,19 +374,11 @@ Notes:
 <h2 class="anchored" data-anchor-id="question-4-visualization-of-bivariate-relationship-time">Question 4: Visualization of Bivariate Relationship (Time)</h2>
 <p><strong>Question:</strong> Create a scatter plot with the regression line showing the relationship between Time and Anxiety. Comment on the fit and any potential issues.</p>
 <div id="cell-fig-time-bivariate" class="cell" data-execution_count="6">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\whatf\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names
-  warnings.warn(
-C:\Users\whatf\AppData\Local\Temp\ipykernel_31096\1643013207.py:25: UserWarning: Glyph 8322 (\N{SUBSCRIPT TWO}) missing from font(s) Arial.
-  plt.tight_layout()
-C:\Users\whatf\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\IPython\core\pylabtools.py:170: UserWarning: Glyph 8322 (\N{SUBSCRIPT TWO}) missing from font(s) Arial.
-  fig.canvas.print_figure(bytes_io, **kw)</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div id="fig-time-bivariate" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-time-bivariate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-time-bivariate-output-2.png" width="758" height="565" class="figure-img">
+<img src="index_files/figure-html/fig-time-bivariate-output-1.png" width="758" height="565" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-time-bivariate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Bivariate relationship between Time and Anxiety with regression line
@@ -416,7 +400,7 @@ Figure&nbsp;2: Bivariate relationship between Time and Anxiety with regression l
 <section id="question-5-multiple-regression-analysis-stresssurvey-and-time" class="level2">
 <h2 class="anchored" data-anchor-id="question-5-multiple-regression-analysis-stresssurvey-and-time">Question 5: Multiple Regression Analysis (StressSurvey and Time)</h2>
 <p><strong>Question:</strong> Run a multiple regression of Anxiety on both <strong>StressSurvey</strong> and Time. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="9a990dd0" class="cell" data-execution_count="7">
+<div id="f2440bc0" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 MULTIPLE REGRESSION: Anxiety ~ StressSurvey + Time
@@ -443,7 +427,7 @@ Dep. Variable:                Anxiety   R-squared:                       0.935
 Model:                            OLS   Adj. R-squared:                  0.924
 Method:                 Least Squares   F-statistic:                     86.32
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           7.54e-08
-Time:                        18:59:28   Log-Likelihood:                -23.931
+Time:                        19:10:38   Log-Likelihood:                -23.931
 No. Observations:                  15   AIC:                             53.86
 Df Residuals:                      12   BIC:                             55.99
 Df Model:                           2                                         
@@ -508,7 +492,7 @@ Notes:
 <section id="question-6-multiple-regression-analysis-stress-and-time" class="level2">
 <h2 class="anchored" data-anchor-id="question-6-multiple-regression-analysis-stress-and-time">Question 6: Multiple Regression Analysis (Stress and Time)</h2>
 <p><strong>Question:</strong> Run a multiple regression of Anxiety on both <strong>Stress</strong> and Time. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="7ea6b0b5" class="cell" data-execution_count="8">
+<div id="5cd6fc40" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 MULTIPLE REGRESSION: Anxiety ~ Stress + Time
@@ -535,7 +519,7 @@ Dep. Variable:                Anxiety   R-squared:                       1.000
 Model:                            OLS   Adj. R-squared:                  1.000
 Method:                 Least Squares   F-statistic:                 8.600e+31
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):          1.15e-187
-Time:                        18:59:28   Log-Likelihood:                 493.62
+Time:                        19:10:38   Log-Likelihood:                 493.62
 No. Observations:                  15   AIC:                            -981.2
 Df Residuals:                      12   BIC:                            -979.1
 Df Model:                           2                                         
@@ -596,7 +580,7 @@ Notes:
 <section id="question-7-model-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="question-7-model-comparison">Question 7: Model Comparison</h2>
 <p><strong>Question:</strong> Compare the R-squared values and coefficient interpretations between the two multiple regression models. Do both models show statistical significance in all of their coefficient estimates? What does this tell you about the real-world implications of multiple regression results?</p>
-<div id="427761ef" class="cell" data-execution_count="9">
+<div id="062478e4" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>================================================================================
 MODEL COMPARISON: StressSurvey + Time vs. Stress + Time
@@ -712,7 +696,7 @@ Model 2 (Stress + Time):
 <section id="question-9-avoiding-misleading-statistical-significance" class="level2">
 <h2 class="anchored" data-anchor-id="question-9-avoiding-misleading-statistical-significance">Question 9: Avoiding Misleading Statistical Significance</h2>
 <p><strong>Question:</strong> Reflect on this tip to avoid being misled by statistically significant results: splitting the sample into meaningful subsets (“statistical regimes”), and using graphical diagnostics for linearity rather than blind reliance on “canned” regressions. Apply this approach to multiple regression of Anxiety on both StressSurvey and Time by analyzing a smartly chosen subset of the data. What specific subset did you choose and why? Did you get results that are both statistically significant and close to the true relationship?</p>
-<div id="5a90e9b6" class="cell" data-execution_count="10">
+<div id="eaec9e93" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 DATA EXPLORATION FOR SUBSET SELECTION
@@ -746,7 +730,7 @@ Stress
 <p><strong>Subset Selection Strategy:</strong></p>
 <p>Looking at the data, I notice that StressSurvey has distinct “regimes”: - Low stress regime: StressSurvey = 0, 3, 6 (corresponding to Stress = 0, 1, 2) - High stress regime: StressSurvey = 9, 12 (corresponding to Stress = 8, 12)</p>
 <p>The non-linearity problem occurs because the relationship between StressSurvey and Stress changes between these regimes. Let me analyze the <strong>low stress regime</strong> (StressSurvey ≤ 6) separately, where the relationship might be more linear.</p>
-<div id="4f5beb4d" class="cell" data-execution_count="11">
+<div id="43e30c0e" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 SUBSET ANALYSIS: Low Stress Regime (StressSurvey &lt;= 6)
@@ -790,7 +774,7 @@ Dep. Variable:                Anxiety   R-squared:                       1.000
 Model:                            OLS   Adj. R-squared:                  1.000
 Method:                 Least Squares   F-statistic:                 5.366e+30
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           1.75e-91
-Time:                        18:59:28   Log-Likelihood:                 301.93
+Time:                        19:10:39   Log-Likelihood:                 301.93
 No. Observations:                   9   AIC:                            -597.9
 Df Residuals:                       6   BIC:                            -597.3
 Df Model:                           2                                         
@@ -819,7 +803,7 @@ Notes:
 <p><strong>Critical Finding:</strong></p>
 <p>The Time coefficient (0.1000) is now <strong>correct</strong>! This is a huge improvement over the full-sample result (-1.8222). However, the StressSurvey coefficient (0.3333) doesn’t match the true Stress coefficient (1.0) because StressSurvey is still a proxy with a different scale.</p>
 <p>Let me try a different approach: using only observations where we have the true Stress values directly.</p>
-<div id="a0aa40d7" class="cell" data-execution_count="12">
+<div id="0e142318" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 ALTERNATIVE SUBSET: Low True Stress (Stress &lt;= 2)
@@ -863,7 +847,7 @@ Dep. Variable:                Anxiety   R-squared:                       1.000
 Model:                            OLS   Adj. R-squared:                  1.000
 Method:                 Least Squares   F-statistic:                 1.331e+30
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           1.14e-89
-Time:                        18:59:29   Log-Likelihood:                 295.66
+Time:                        19:10:39   Log-Likelihood:                 295.66
 No. Observations:                   9   AIC:                            -585.3
 Df Residuals:                       6   BIC:                            -584.7
 Df Model:                           2                                         
@@ -889,17 +873,11 @@ Notes:
 <p>By focusing on the low-stress regime (Stress ≤ 2) where we can use true Stress measurements, we get: - <strong>Intercept (β₀):</strong> 0.0000 ✓ (perfect match) - <strong>Coefficient on Stress (β₁):</strong> 1.0000 ✓ (perfect match) - <strong>Coefficient on Time (β₂):</strong> 0.1000 ✓ (perfect match) - <strong>R-squared:</strong> 1.0 - <strong>Statistical significance:</strong> All coefficients are significant</p>
 <p><strong>Visual Diagnostic:</strong></p>
 <div id="cell-fig-full-sample-wrong" class="cell" data-execution_count="13">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\whatf\AppData\Local\Temp\ipykernel_31096\4186083606.py:19: UserWarning: Glyph 8322 (\N{SUBSCRIPT TWO}) missing from font(s) Arial.
-  plt.tight_layout()
-C:\Users\whatf\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\IPython\core\pylabtools.py:170: UserWarning: Glyph 8322 (\N{SUBSCRIPT TWO}) missing from font(s) Arial.
-  fig.canvas.print_figure(bytes_io, **kw)</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div id="fig-full-sample-wrong" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-full-sample-wrong-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-full-sample-wrong-output-2.png" width="662" height="566" class="figure-img">
+<img src="index_files/figure-html/fig-full-sample-wrong-output-1.png" width="662" height="566" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-full-sample-wrong-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Full sample regression showing incorrect Time coefficient
@@ -909,15 +887,11 @@ Figure&nbsp;3: Full sample regression showing incorrect Time coefficient
 </div>
 </div>
 <div id="cell-fig-subset-correct" class="cell" data-execution_count="14">
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\whatf\AppData\Local\Temp\ipykernel_31096\1910091676.py:16: UserWarning: Glyph 8322 (\N{SUBSCRIPT TWO}) missing from font(s) Arial.
-  plt.tight_layout()</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div id="fig-subset-correct" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-subset-correct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-subset-correct-output-2.png" width="662" height="566" class="figure-img">
+<img src="index_files/figure-html/fig-subset-correct-output-1.png" width="662" height="566" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subset-correct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Subset regression (Stress ≤ 2) showing correct Time coefficient

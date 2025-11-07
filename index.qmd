@@ -39,7 +39,6 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import statsmodels.api as sm
-from scipy import stats
 
 # Generate the "true" data with known relationships
 observDF = pd.DataFrame({
@@ -114,6 +113,7 @@ The coefficient of 0.9556 is close to 1.0, which makes sense because StressSurve
 #| label: fig-stresssurvey-bivariate
 #| fig-cap: "Bivariate relationship between StressSurvey and Anxiety with regression line"
 #| echo: false
+#| warning: false
 
 fig, ax = plt.subplots(figsize=(8, 6))
 
@@ -209,6 +209,10 @@ This is a classic example of omitted variable bias: by failing to control for St
 #| label: fig-time-bivariate
 #| fig-cap: "Bivariate relationship between Time and Anxiety with regression line"
 #| echo: false
+#| warning: false
+
+import warnings
+warnings.filterwarnings('ignore')
 
 fig, ax = plt.subplots(figsize=(8, 6))
 
@@ -640,6 +644,7 @@ By focusing on the low-stress regime (Stress ≤ 2) where we can use true Stress
 #| label: fig-full-sample-wrong
 #| fig-cap: "Full sample regression showing incorrect Time coefficient"
 #| echo: false
+#| warning: false
 
 fig, ax = plt.subplots(figsize=(7, 6))
 
@@ -667,6 +672,7 @@ plt.show()
 #| label: fig-subset-correct
 #| fig-cap: "Subset regression (Stress ≤ 2) showing correct Time coefficient"
 #| echo: false
+#| warning: false
 
 fig, ax = plt.subplots(figsize=(7, 6))
 
