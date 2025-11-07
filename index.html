@@ -115,7 +115,7 @@ window.Quarto = {
 Table&nbsp;1: Observed data with known true relationships
 </figcaption>
 <div aria-describedby="tbl-observations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display" data-execution_count="44">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -248,7 +248,7 @@ Table&nbsp;1: Observed data with known true relationships
 <section id="question-1-bivariate-regression-analysis-with-stresssurvey" class="level2">
 <h2 class="anchored" data-anchor-id="question-1-bivariate-regression-analysis-with-stresssurvey">Question 1: Bivariate Regression Analysis with StressSurvey</h2>
 <p><strong>Question:</strong> Run a bivariate regression of Anxiety on StressSurvey. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="e6174ef6" class="cell" data-execution_count="3">
+<div id="83c4794c" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 BIVARIATE REGRESSION: Anxiety ~ StressSurvey
@@ -267,7 +267,7 @@ Dep. Variable:                Anxiety   R-squared:                       0.901
 Model:                            OLS   Adj. R-squared:                  0.893
 Method:                 Least Squares   F-statistic:                     118.4
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           6.68e-08
-Time:                        19:10:38   Log-Likelihood:                -27.079
+Time:                        19:32:57   Log-Likelihood:                -27.079
 No. Observations:                  15   AIC:                             58.16
 Df Residuals:                      13   BIC:                             59.57
 Df Model:                           1                                         
@@ -324,7 +324,7 @@ Figure&nbsp;1: Bivariate relationship between StressSurvey and Anxiety with regr
 <section id="question-3-bivariate-regression-analysis-with-time" class="level2">
 <h2 class="anchored" data-anchor-id="question-3-bivariate-regression-analysis-with-time">Question 3: Bivariate Regression Analysis with Time</h2>
 <p><strong>Question:</strong> Run a bivariate regression of Anxiety on Time. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="12913555" class="cell" data-execution_count="5">
+<div id="24317a7a" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 BIVARIATE REGRESSION: Anxiety ~ Time
@@ -343,7 +343,7 @@ Dep. Variable:                Anxiety   R-squared:                       0.563
 Model:                            OLS   Adj. R-squared:                  0.529
 Method:                 Least Squares   F-statistic:                     16.75
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):            0.00127
-Time:                        19:10:38   Log-Likelihood:                -38.223
+Time:                        19:32:58   Log-Likelihood:                -38.223
 No. Observations:                  15   AIC:                             80.45
 Df Residuals:                      13   BIC:                             81.86
 Df Model:                           1                                         
@@ -400,7 +400,7 @@ Figure&nbsp;2: Bivariate relationship between Time and Anxiety with regression l
 <section id="question-5-multiple-regression-analysis-stresssurvey-and-time" class="level2">
 <h2 class="anchored" data-anchor-id="question-5-multiple-regression-analysis-stresssurvey-and-time">Question 5: Multiple Regression Analysis (StressSurvey and Time)</h2>
 <p><strong>Question:</strong> Run a multiple regression of Anxiety on both <strong>StressSurvey</strong> and Time. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="f2440bc0" class="cell" data-execution_count="7">
+<div id="73d7adab" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 MULTIPLE REGRESSION: Anxiety ~ StressSurvey + Time
@@ -427,7 +427,7 @@ Dep. Variable:                Anxiety   R-squared:                       0.935
 Model:                            OLS   Adj. R-squared:                  0.924
 Method:                 Least Squares   F-statistic:                     86.32
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           7.54e-08
-Time:                        19:10:38   Log-Likelihood:                -23.931
+Time:                        19:32:58   Log-Likelihood:                -23.931
 No. Observations:                  15   AIC:                             53.86
 Df Residuals:                      12   BIC:                             55.99
 Df Model:                           2                                         
@@ -450,7 +450,7 @@ Notes:
 </div>
 </div>
 <p><strong>Answer:</strong></p>
-<p>The multiple regression of Anxiety on StressSurvey and Time produces: - <strong>Intercept (β₀):</strong> Approximately 0.7333 - <strong>Coefficient on StressSurvey (β₁):</strong> Approximately 0.9556 - <strong>Coefficient on Time (β₂):</strong> Approximately -1.8222 - <strong>R-squared:</strong> Very high (close to 1.0)</p>
+<p>The multiple regression of Anxiety on StressSurvey and Time produces: - <strong>Intercept (β₀):</strong> Approximately 0.5888 - <strong>Coefficient on StressSurvey (β₁):</strong> Approximately 1.4269 - <strong>Coefficient on Time (β₂):</strong> Approximately -2.7799 - <strong>R-squared:</strong> 0.9350 (high but not perfect)</p>
 <p><strong>Comparison to True Relationship:</strong> This is where the problem becomes devastatingly clear:</p>
 <table class="caption-top table">
 <thead>
@@ -465,24 +465,24 @@ Notes:
 <tr class="odd">
 <td>Intercept</td>
 <td>0.0</td>
-<td>0.7333</td>
+<td>0.5888</td>
 <td>Wrong</td>
 </tr>
 <tr class="even">
 <td>Stress</td>
 <td>1.0</td>
-<td>0.9556</td>
-<td>Close, but using wrong variable</td>
+<td>1.4269</td>
+<td>Wrong scale (using proxy)</td>
 </tr>
 <tr class="odd">
 <td>Time</td>
 <td>0.1</td>
-<td><strong>-1.8222</strong></td>
+<td><strong>-2.7799</strong></td>
 <td><strong>WRONG SIGN!</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Critical Finding:</strong> 1. <strong>Wrong sign for Time:</strong> The true coefficient is +0.1 (Time increases Anxiety), but the regression estimates -1.8222 (Time decreases Anxiety). This is a complete reversal of the true relationship!</p>
+<p><strong>Critical Finding:</strong> 1. <strong>Wrong sign for Time:</strong> The true coefficient is +0.1 (Time increases Anxiety), but the regression estimates -2.7799 (Time decreases Anxiety). This is a complete reversal of the true relationship, and the magnitude is overestimated by nearly 28 times (in the wrong direction)!</p>
 <ol start="2" type="1">
 <li><p><strong>Why this happens:</strong> StressSurvey has a non-linear relationship with true Stress. When we try to control for StressSurvey linearly, the regression compensates by assigning the wrong sign to Time. This happens because the non-linearity creates a spurious correlation pattern that linear regression misinterprets.</p></li>
 <li><p><strong>Statistical significance doesn’t help:</strong> Even though the coefficients are likely statistically significant (with high R-squared), they tell the completely wrong story about how Time affects Anxiety.</p></li>
@@ -492,7 +492,7 @@ Notes:
 <section id="question-6-multiple-regression-analysis-stress-and-time" class="level2">
 <h2 class="anchored" data-anchor-id="question-6-multiple-regression-analysis-stress-and-time">Question 6: Multiple Regression Analysis (Stress and Time)</h2>
 <p><strong>Question:</strong> Run a multiple regression of Anxiety on both <strong>Stress</strong> and Time. What are the estimated coefficients? How do they compare to the true relationship?</p>
-<div id="5cd6fc40" class="cell" data-execution_count="8">
+<div id="5c713955" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 MULTIPLE REGRESSION: Anxiety ~ Stress + Time
@@ -519,7 +519,7 @@ Dep. Variable:                Anxiety   R-squared:                       1.000
 Model:                            OLS   Adj. R-squared:                  1.000
 Method:                 Least Squares   F-statistic:                 8.600e+31
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):          1.15e-187
-Time:                        19:10:38   Log-Likelihood:                 493.62
+Time:                        19:32:58   Log-Likelihood:                 493.62
 No. Observations:                  15   AIC:                            -981.2
 Df Residuals:                      12   BIC:                            -979.1
 Df Model:                           2                                         
@@ -580,7 +580,7 @@ Notes:
 <section id="question-7-model-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="question-7-model-comparison">Question 7: Model Comparison</h2>
 <p><strong>Question:</strong> Compare the R-squared values and coefficient interpretations between the two multiple regression models. Do both models show statistical significance in all of their coefficient estimates? What does this tell you about the real-world implications of multiple regression results?</p>
-<div id="062478e4" class="cell" data-execution_count="9">
+<div id="666e42d1" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>================================================================================
 MODEL COMPARISON: StressSurvey + Time vs. Stress + Time
@@ -610,7 +610,7 @@ Model 2 (Stress + Time):
 </div>
 </div>
 <p><strong>Answer:</strong></p>
-<p><strong>R-squared Comparison:</strong> Both models have R-squared values near or at 1.0, indicating excellent statistical fit. However, Model 2 (Stress + Time) has a perfect R-squared of 1.0, while Model 1 (StressSurvey + Time) is slightly lower but still extremely high.</p>
+<p><strong>R-squared Comparison:</strong> Both models have high R-squared values, indicating good statistical fit. Model 2 (Stress + Time) has a perfect R-squared of 1.0, while Model 1 (StressSurvey + Time) has an R-squared of 0.9350—still very high but not perfect. This high R-squared in Model 1 is particularly dangerous because it creates a false sense of confidence in incorrect results.</p>
 <p><strong>Coefficient Comparison:</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -632,21 +632,21 @@ Model 2 (Stress + Time):
 <tbody>
 <tr class="odd">
 <td>Intercept</td>
-<td>0.7333</td>
+<td>0.5888</td>
 <td>0.0000</td>
 <td>0.0</td>
 <td>Model 2 only</td>
 </tr>
 <tr class="even">
 <td>Stress Coef</td>
-<td>0.9556</td>
+<td>1.4269</td>
 <td>1.0000</td>
 <td>1.0</td>
 <td>Model 2 only</td>
 </tr>
 <tr class="odd">
 <td>Time Coef</td>
-<td><strong>-1.8222</strong></td>
+<td><strong>-2.7799</strong></td>
 <td>0.1000</td>
 <td>0.1</td>
 <td><strong>Model 2 only</strong></td>
@@ -659,7 +659,7 @@ Model 2 (Stress + Time):
 <li><p><strong>Statistical significance is not enough:</strong> Model 1 demonstrates that you can have statistically significant, high R-squared results that are fundamentally misleading. Researchers and policymakers who rely solely on p-values and R-squared are at risk of making catastrophic errors.</p></li>
 <li><p><strong>Proxy variables are dangerous:</strong> In the real world, we often can’t measure variables directly (like stress via blood tests). We use proxies (like surveys). Model 1 shows that even a “good” proxy with a monotonic relationship can produce completely wrong regression results due to non-linearity.</p></li>
 <li><p><strong>The replication crisis connection:</strong> This explains part of why many published regression results don’t replicate. Researchers using different proxy measures or different samples might get opposite results, all with statistical significance.</p></li>
-<li><p><strong>Policy implications:</strong> If Model 1’s results were published, policymakers might conclude that reducing social media time increases anxiety (because the Time coefficient is negative). This is the opposite of the truth! Real-world decisions based on such results could be harmful.</p></li>
+<li><p><strong>Policy implications:</strong> If Model 1’s results were published, policymakers might conclude that reducing social media time increases anxiety (because the Time coefficient is -2.7799, suggesting Time reduces Anxiety). This is the opposite of the truth! Real-world decisions based on such results could be harmful. The magnitude of the error (-2.7799 vs.&nbsp;+0.1) is so large that policy recommendations would be catastrophically wrong.</p></li>
 <li><p><strong>Trust but verify:</strong> The key lesson is that regression results need to be validated against theoretical expectations and checked for non-linearity, not just accepted based on statistical significance alone.</p></li>
 </ol>
 <hr>
@@ -668,7 +668,7 @@ Model 2 (Stress + Time):
 <h2 class="anchored" data-anchor-id="question-8-real-world-implications-and-headlines">Question 8: Real-World Implications and Headlines</h2>
 <p><strong>Question:</strong> For each of the two multiple regression models, assume their respective outputs/conclusions were published in academic journals and then subsequently picked up by the popular press. What headline about time spent on social media and its effect on anxiety would you expect to see from a popular press outlet covering the first model? And what headline would you expect to see from a popular press outlet covering the second model? Assuming confirmation bias is real, which model is a typical parent going to believe? Which model will Facebook, Instagram, and TikTok executives prefer?</p>
 <p><strong>Answer:</strong></p>
-<p><strong>Headline for Model 1 (StressSurvey + Time):</strong> &gt; <strong>“BREAKING: New Study Shows Social Media Actually REDUCES Anxiety! Researchers Find Negative Association Between Screen Time and Mental Health Problems”</strong> &gt; &gt; <em>“A groundbreaking study published in a leading psychology journal has found that increased time on social media platforms is associated with lower anxiety levels. The research, which controlled for stress levels through comprehensive survey data, revealed that each additional minute spent on social media reduces anxiety by nearly 2 points. ‘This challenges everything we thought we knew about social media and mental health,’ said the lead researcher.”</em></p>
+<p><strong>Headline for Model 1 (StressSurvey + Time):</strong> &gt; <strong>“BREAKING: New Study Shows Social Media Actually REDUCES Anxiety! Researchers Find Negative Association Between Screen Time and Mental Health Problems”</strong> &gt; &gt; <em>“A groundbreaking study published in a leading psychology journal has found that increased time on social media platforms is associated with lower anxiety levels. The research, which controlled for stress levels through comprehensive survey data, revealed that each additional minute spent on social media reduces anxiety by nearly 3 points. ‘This challenges everything we thought we knew about social media and mental health,’ said the lead researcher.”</em></p>
 <p><strong>Headline for Model 2 (Stress + Time):</strong> &gt; <strong>“New Research Confirms Social Media Increases Anxiety, But Effect is Small”</strong> &gt; &gt; <em>“A carefully controlled study using biological stress measurements has confirmed that social media use does increase anxiety, though the effect is modest. Researchers found that each additional minute of social media use increases anxiety by 0.1 points, a small but statistically significant effect. ‘The relationship is real, but we shouldn’t panic about moderate social media use,’ noted one expert.”</em></p>
 <p><strong>Who Believes What and Why:</strong></p>
 <ol type="1">
@@ -676,7 +676,7 @@ Model 2 (Stress + Time):
 <ul>
 <li>Parents want to believe they’re not harming their children by allowing social media use</li>
 <li>The “surprising” finding that social media reduces anxiety is more clickable and memorable</li>
-<li>Model 1’s larger coefficient (-1.8222) creates a more dramatic narrative than Model 2’s small coefficient (0.1)</li>
+<li>Model 1’s larger coefficient (-2.7799) creates a more dramatic narrative than Model 2’s small coefficient (0.1)</li>
 <li>The negative sign in Model 1 suggests a “solution” (use more social media), which is psychologically appealing</li>
 </ul></li>
 <li><strong>Social Media Executives (Facebook, Instagram, TikTok):</strong> They will <strong>strongly prefer Model 1</strong> for obvious reasons:
@@ -696,7 +696,7 @@ Model 2 (Stress + Time):
 <section id="question-9-avoiding-misleading-statistical-significance" class="level2">
 <h2 class="anchored" data-anchor-id="question-9-avoiding-misleading-statistical-significance">Question 9: Avoiding Misleading Statistical Significance</h2>
 <p><strong>Question:</strong> Reflect on this tip to avoid being misled by statistically significant results: splitting the sample into meaningful subsets (“statistical regimes”), and using graphical diagnostics for linearity rather than blind reliance on “canned” regressions. Apply this approach to multiple regression of Anxiety on both StressSurvey and Time by analyzing a smartly chosen subset of the data. What specific subset did you choose and why? Did you get results that are both statistically significant and close to the true relationship?</p>
-<div id="eaec9e93" class="cell" data-execution_count="10">
+<div id="8e327cd2" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 DATA EXPLORATION FOR SUBSET SELECTION
@@ -730,7 +730,7 @@ Stress
 <p><strong>Subset Selection Strategy:</strong></p>
 <p>Looking at the data, I notice that StressSurvey has distinct “regimes”: - Low stress regime: StressSurvey = 0, 3, 6 (corresponding to Stress = 0, 1, 2) - High stress regime: StressSurvey = 9, 12 (corresponding to Stress = 8, 12)</p>
 <p>The non-linearity problem occurs because the relationship between StressSurvey and Stress changes between these regimes. Let me analyze the <strong>low stress regime</strong> (StressSurvey ≤ 6) separately, where the relationship might be more linear.</p>
-<div id="43e30c0e" class="cell" data-execution_count="11">
+<div id="92106665" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 SUBSET ANALYSIS: Low Stress Regime (StressSurvey &lt;= 6)
@@ -774,7 +774,7 @@ Dep. Variable:                Anxiety   R-squared:                       1.000
 Model:                            OLS   Adj. R-squared:                  1.000
 Method:                 Least Squares   F-statistic:                 5.366e+30
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           1.75e-91
-Time:                        19:10:39   Log-Likelihood:                 301.93
+Time:                        19:32:58   Log-Likelihood:                 301.93
 No. Observations:                   9   AIC:                            -597.9
 Df Residuals:                       6   BIC:                            -597.3
 Df Model:                           2                                         
@@ -801,9 +801,9 @@ Notes:
 <p><strong>Results:</strong></p>
 <p>The subset regression produces: - <strong>Intercept (β₀):</strong> 0.0000 (matches true value of 0.0 ✓) - <strong>Coefficient on StressSurvey (β₁):</strong> 0.3333 (should be 1.0, but we’re using StressSurvey not Stress) - <strong>Coefficient on Time (β₂):</strong> 0.1000 (matches true value of 0.1 ✓) - <strong>R-squared:</strong> 1.0 - <strong>Statistical significance:</strong> All coefficients are significant</p>
 <p><strong>Critical Finding:</strong></p>
-<p>The Time coefficient (0.1000) is now <strong>correct</strong>! This is a huge improvement over the full-sample result (-1.8222). However, the StressSurvey coefficient (0.3333) doesn’t match the true Stress coefficient (1.0) because StressSurvey is still a proxy with a different scale.</p>
+<p>The Time coefficient (0.1000) is now <strong>correct</strong>! This is a huge improvement over the full-sample result (-2.7799). However, the StressSurvey coefficient (0.3333) doesn’t match the true Stress coefficient (1.0) because StressSurvey is still a proxy with a different scale.</p>
 <p>Let me try a different approach: using only observations where we have the true Stress values directly.</p>
-<div id="0e142318" class="cell" data-execution_count="12">
+<div id="bce88453" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>============================================================
 ALTERNATIVE SUBSET: Low True Stress (Stress &lt;= 2)
@@ -847,7 +847,7 @@ Dep. Variable:                Anxiety   R-squared:                       1.000
 Model:                            OLS   Adj. R-squared:                  1.000
 Method:                 Least Squares   F-statistic:                 1.331e+30
 Date:                Thu, 06 Nov 2025   Prob (F-statistic):           1.14e-89
-Time:                        19:10:39   Log-Likelihood:                 295.66
+Time:                        19:32:59   Log-Likelihood:                 295.66
 No. Observations:                   9   AIC:                            -585.3
 Df Residuals:                       6   BIC:                            -584.7
 Df Model:                           2                                         
@@ -922,7 +922,7 @@ Figure&nbsp;4: Subset regression (Stress ≤ 2) showing correct Time coefficient
 <ol type="1">
 <li><p><strong>Statistical significance is necessary but not sufficient:</strong> High R-squared and significant p-values don’t guarantee correct coefficients, especially when non-linearity is present.</p></li>
 <li><p><strong>Proxy variables are dangerous:</strong> Even “good” proxies with monotonic relationships can produce completely wrong regression results if they have non-linear relationships with the true variables.</p></li>
-<li><p><strong>The sign matters:</strong> Getting the wrong sign on a coefficient (like Time going from +0.1 to -1.8222) can lead to completely opposite policy recommendations and real-world harm.</p></li>
+<li><p><strong>The sign matters:</strong> Getting the wrong sign on a coefficient (like Time going from +0.1 to -2.7799) can lead to completely opposite policy recommendations and real-world harm.</p></li>
 <li><p><strong>Subset analysis helps:</strong> Splitting data into meaningful “statistical regimes” and using graphical diagnostics can reveal problems that full-sample regression misses.</p></li>
 <li><p><strong>Real-world consequences are real:</strong> Wrong regression results get published, amplified by media, and used to make policy decisions. The non-linearity problem contributes to the replication crisis and undermines public trust in science.</p></li>
 </ol>
